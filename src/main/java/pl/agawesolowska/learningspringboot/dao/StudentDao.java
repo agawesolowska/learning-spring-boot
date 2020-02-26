@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import pl.agawesolowska.learningspringboot.model.Student;
+import pl.agawesolowska.learningspringboot.entity.Student;
 
 public interface StudentDao {
 

@@ -1,6 +1,7 @@
 package pl.agawesolowska.learningspringboot.api;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import javax.validation.Valid;
@@ -16,17 +17,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import pl.agawesolowska.learningspringboot.model.Student;
+import pl.agawesolowska.learningspringboot.entity.Student;
 import pl.agawesolowska.learningspringboot.service.StudentService;
 
-@RequestMapping("/api/v1/student")
 @RestController
-public class StudentController {
+@RequestMapping("/api/v1/students")
+public class StudentRestController {
 
-	private final StudentService studentService;
+	private StudentService studentService;
 
 	@Autowired
-	public StudentController(StudentService studentService) {
+	public StudentRestController(StudentService studentService) {
 		this.studentService = studentService;
 	}
 
@@ -41,8 +42,8 @@ public class StudentController {
 	}
 
 	@GetMapping("/{id}")
-	public Student getStudentById(@PathVariable UUID id) {
-		return studentService.getStudentById(id).orElse(null);
+	public Optional<Student> getStudentById(@PathVariable UUID id) {
+		return studentService.getStudentById(id);
 	}
 
 	@PutMapping("/{id}")

@@ -7,10 +7,10 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Repository;
 
-import pl.agawesolowska.learningspringboot.model.Student;
+import pl.agawesolowska.learningspringboot.entity.Student;
 
-@Repository("mockService")
-public class MockStudentDataAccessService implements StudentDao {
+@Repository("mockDataAccess")
+public class MockStudentDataAccess implements StudentDao {
 
 	private static List<Student> DB = new ArrayList<>();
 
@@ -32,25 +32,29 @@ public class MockStudentDataAccessService implements StudentDao {
 
 	@Override
 	public int updateStudentById(UUID id, Student studentToUpdate) {
-		return selectStudentById(id).map(student -> {
-			int indexOfStudentToUpdate = DB.indexOf(student);
-			if (indexOfStudentToUpdate >= 0) {
+		Optional<Student> optionalStudent = selectStudentById(id);
+		if (optionalStudent.isEmpty()) {
+			return 0;
+		} else {
+			optionalStudent.map(student -> {
+				int indexOfStudentToUpdate = DB.indexOf(student);
 				DB.set(indexOfStudentToUpdate, new Student(id, studentToUpdate.getName(), studentToUpdate.getAge(),
 						studentToUpdate.getFieldOfStudy()));
 				return 1;
-			}
-			return 0;
-		}).orElse(0);
+			});
+		}
+		return 0;
 	}
 
 	@Override
 	public int deleteStudentById(UUID id) {
-		Optional<Student> optionalPerson = selectStudentById(id);
-		if (optionalPerson.isEmpty()) {
+		Optional<Student> optionalStudent = selectStudentById(id);
+		if (optionalStudent.isEmpty()) {
 			return 0;
+		} else {
+			DB.remove(optionalStudent.get());
+			return 1;
 		}
-		DB.remove(optionalPerson.get());
-		return 1;
 	}
-	
+
 }

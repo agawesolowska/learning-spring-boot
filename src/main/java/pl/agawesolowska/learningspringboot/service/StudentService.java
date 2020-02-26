@@ -9,15 +9,15 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import pl.agawesolowska.learningspringboot.dao.StudentDao;
-import pl.agawesolowska.learningspringboot.model.Student;
+import pl.agawesolowska.learningspringboot.entity.Student;
 
 @Service
 public class StudentService {
 
-	private final StudentDao studentDao;
+	private StudentDao studentDao;
 
 	@Autowired
-	public StudentService(@Qualifier("mockService") StudentDao studentDao) {
+	public StudentService(@Qualifier("dataAccess") StudentDao studentDao) {
 		this.studentDao = studentDao;
 	}
 
