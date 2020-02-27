@@ -26,9 +26,7 @@ public class StudentDataAccess implements StudentDao {
 	@Override
 	public int insertStudent(UUID id, Student student) {
 		Session currentSession = entityManager.unwrap(Session.class);
-		currentSession.beginTransaction();
 		currentSession.save(student);
-		currentSession.getTransaction().commit();
 		return 1;
 	}
 
@@ -52,24 +50,19 @@ public class StudentDataAccess implements StudentDao {
 	@Override
 	public int updateStudentById(UUID id, Student studentToUpdate) {
 		Session currentSession = entityManager.unwrap(Session.class);
-		currentSession.beginTransaction();
 		Student student = currentSession.get(Student.class, id);
 		student.setName(studentToUpdate.getName());
 		student.setAge(studentToUpdate.getAge());
 		student.setFieldOfStudy(studentToUpdate.getFieldOfStudy());
 		currentSession.saveOrUpdate(student);
-		currentSession.getTransaction().commit();
 		return 1;
 	}
 
 	@Override
 	public int deleteStudentById(UUID id) {
 		Session currentSession = entityManager.unwrap(Session.class);
-		currentSession.beginTransaction();
 		Query<Student> query = currentSession.createQuery("delete from Student where id=:studentId");
-		query.setParameter("studentId", id);
-		query.executeUpdate();
-		currentSession.getTransaction().commit();
+		query.setParameter("studentId", id).executeUpdate();
 		return 1;
 	}
 
