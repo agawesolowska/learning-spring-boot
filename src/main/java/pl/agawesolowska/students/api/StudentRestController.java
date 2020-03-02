@@ -1,4 +1,4 @@
-package pl.agawesolowska.learningspringboot.api;
+package pl.agawesolowska.students.api;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import pl.agawesolowska.learningspringboot.entity.Student;
-import pl.agawesolowska.learningspringboot.service.StudentService;
+import pl.agawesolowska.students.entity.Student;
+import pl.agawesolowska.students.service.StudentService;
 
 @RestController
 @RequestMapping("/api/v1/students")

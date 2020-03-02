@@ -11,10 +11,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>pl.agawesolowska.learningspringboot</groupId>
-	<artifactId>GitHub-learning-spring-boot-rest-api</artifactId>
+	<groupId>pl.agawesolowska.students</groupId>
+	<artifactId>GitHub-students-spring-boot-rest-api</artifactId>
 	<version>1.0</version>
-	<name>GitHub-learning-spring-boot-rest-api</name>
+	<name>GitHub-students-spring-boot-rest-api</name>
 	<description>Spring Boot/REST API project with Free Code Camp nad Udemy support</description>
 
 	<properties>

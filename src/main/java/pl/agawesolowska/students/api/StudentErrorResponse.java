@@ -1,4 +1,4 @@
-package pl.agawesolowska.learningspringboot.api;
+package pl.agawesolowska.students.api;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

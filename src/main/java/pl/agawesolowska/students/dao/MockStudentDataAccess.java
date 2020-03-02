@@ -1,4 +1,4 @@
-package pl.agawesolowska.learningspringboot.dao;
+package pl.agawesolowska.students.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Repository;
 
-import pl.agawesolowska.learningspringboot.entity.Student;
+import pl.agawesolowska.students.entity.Student;
 
 @Repository("mockDataAccess")
 public class MockStudentDataAccess implements StudentDao {

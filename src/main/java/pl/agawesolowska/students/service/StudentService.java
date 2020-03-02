@@ -1,4 +1,4 @@
-package pl.agawesolowska.learningspringboot.service;
+package pl.agawesolowska.students.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import pl.agawesolowska.learningspringboot.dao.StudentDao;
-import pl.agawesolowska.learningspringboot.entity.Student;
+import pl.agawesolowska.students.dao.StudentDao;
+import pl.agawesolowska.students.entity.Student;
 
 @Service
 public class StudentService {

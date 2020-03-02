@@ -1,4 +1,4 @@
-package pl.agawesolowska.learningspringboot.dao;
+package pl.agawesolowska.students.dao;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
@@ -10,7 +10,8 @@ import java.util.UUID;
 import org.junit.Before;
 import org.junit.Test;
 
-import pl.agawesolowska.learningspringboot.entity.Student;
+import pl.agawesolowska.students.dao.MockStudentDataAccess;
+import pl.agawesolowska.students.entity.Student;
 
 public class MockStudentDataAccessTests {
 

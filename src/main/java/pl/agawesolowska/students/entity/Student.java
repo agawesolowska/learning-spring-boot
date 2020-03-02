@@ -1,4 +1,4 @@
-package pl.agawesolowska.learningspringboot.entity;
+package pl.agawesolowska.students.entity;
 
 import java.util.UUID;
 
