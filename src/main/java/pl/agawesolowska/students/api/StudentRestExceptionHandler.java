@@ -5,6 +5,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+/**
+ * Unified exception handling class for the entire application.
+ * 
+ * @author Aga
+ *
+ */
 @ControllerAdvice
 public class StudentRestExceptionHandler {
 

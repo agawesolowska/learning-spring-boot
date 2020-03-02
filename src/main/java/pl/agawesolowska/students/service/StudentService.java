@@ -13,6 +13,12 @@ import org.springframework.stereotype.Service;
 import pl.agawesolowska.students.dao.StudentDao;
 import pl.agawesolowska.students.entity.Student;
 
+/**
+ * Service layer that simply delegates calls to the Student Data Access Object.
+ * 
+ * @author Aga
+ *
+ */
 @Service
 public class StudentService {
 

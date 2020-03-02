@@ -5,6 +5,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Simple error response class.
+ * 
+ * @author Aga
+ *
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter @Setter

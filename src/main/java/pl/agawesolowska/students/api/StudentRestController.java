@@ -20,6 +20,12 @@ import org.springframework.web.bind.annotation.RestController;
 import pl.agawesolowska.students.entity.Student;
 import pl.agawesolowska.students.service.StudentService;
 
+/**
+ * The heart of the students' web service responding to HTTP queries.
+ * 
+ * @author Aga
+ *
+ */
 @RestController
 @RequestMapping("/api/v1/students")
 public class StudentRestController {

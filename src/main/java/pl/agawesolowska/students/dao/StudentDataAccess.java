@@ -13,6 +13,12 @@ import org.springframework.stereotype.Repository;
 
 import pl.agawesolowska.students.entity.Student;
 
+/**
+ * Implementation of Data Access Object interface to communicate between an app and the PostgreSQL database.
+ * 
+ * @author Aga
+ *
+ */
 @Repository("dataAccess")
 public class StudentDataAccess implements StudentDao {
 

@@ -13,6 +13,12 @@ import org.junit.Test;
 import pl.agawesolowska.students.dao.MockStudentDataAccess;
 import pl.agawesolowska.students.entity.Student;
 
+/**
+ * Unit tests of a class pretending to access students' data.
+ * 
+ * @author Aga
+ *
+ */
 public class MockStudentDataAccessTests {
 
 	private MockStudentDataAccess underTest;

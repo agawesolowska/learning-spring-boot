@@ -9,6 +9,12 @@ import org.springframework.stereotype.Repository;
 
 import pl.agawesolowska.students.entity.Student;
 
+/**
+ * Implementation of the Data Access Object interface based on the students' list.
+ * 
+ * @author Aga
+ *
+ */
 @Repository("mockDataAccess")
 public class MockStudentDataAccess implements StudentDao {
 
